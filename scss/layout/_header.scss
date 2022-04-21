@@ -1,0 +1,33 @@
+@import "../utilities/variables";
+
+header{
+    background-color: rgb(204, 17, 17);
+    position: sticky;
+    top: 0px;
+    h1{
+        color: white;
+    text-align: right;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-right: 8px;
+    font-size: 32px;
+    }
+    nav{
+        text-align: center;
+        ul{
+            li{
+                display: inline;
+                a{
+                    list-style: none;
+                    text-decoration: none;
+                    font-family: 'Roboto', sans-serif;
+                    color: white;
+                    margin: 6px;
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
