@@ -1,0 +1,101 @@
+// operaciones, vamos a poder sumar restar dividir multiplicar, y combinar
+
+
+$med-principal: 450px;
+
+h2{
+    font-size: ($med-principal - 40) * 5;
+}
+
+// listas
+$colores:red,yellow,pink,black,green;
+
+h3{
+    color: nth($colores,3);
+}
+
+// mixins con parametros
+
+@mixin size ($width, $heigth) {
+    width: $width;
+    height: $heigth;
+}
+
+//mixins sin parametros
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    justify-items: center;
+    align-items: center;
+}
+
+main{
+    @include size(500px, 50px );
+    @include flex;
+}
+
+//mapas
+
+$standard: (
+    // key - valor
+    color-standard: #f1f1f1,
+    bg-standard: black,
+    border-standard: 1px solid green,
+);
+
+$premium: (
+    color-premiun: pink,
+    bg-premium: yellow,
+    border-premium: 1px solid black,
+);
+
+div{
+    background-color: map-get($map: $standard, $key:bg-standard );
+}
+
+// ejemplo 
+.standard{
+    background-color: map-get($map: $standard, $key: border-standard);
+}
+.premium{
+    border: map-get($map: $premium, $key: border-premium);
+}
+
+// extends se usa %
+
+%borde{
+    border: 1px solid;
+    border-radius: 40px;
+    padding: 20px;
+}
+div{
+    background-color: red;
+    box-shadow: 1px 1px black;
+    @extend %borde;
+}
+
+.div{
+    background-color: aqua;
+    box-shadow: 1px 1px green;
+    @extend %borde;
+}
+
+//condicionales
+
+@mixin condicion($color){
+    background-color: $color;
+    // condicional
+    @if $color == orange {
+        border: 1px solic black;
+    } @else{
+        border: 2px solid pink;
+    }
+}
+// ejemplo
+
+.boton-uno{
+    @include condicion(black)
+}

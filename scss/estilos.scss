@@ -8,6 +8,7 @@
 // variables
 @import "utilities/variables";
 @import "layout/header";
+
 *{
     margin: 0;
     padding: 0;
@@ -15,8 +16,15 @@
 body{
     background-color: rgb(199, 199, 199);
 }
+
+$subtitulos: (
+    bg-color-subtitulos: white,
+    
+);
+.subtitulos{
+    background-color: map-get($map: $subtitulos, $key: bg-color-subtitulos);
+}
 h2{
-    background-color: white;
     text-align: center;
     color: rgb(204, 17, 17);
     font-family: 'Roboto', sans-serif;
@@ -39,17 +47,32 @@ h4{
 footer{
     text-align: center;
     color:  rgb(204, 17, 17);
-    font-family:  'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     padding: 50px;
 }
 
-.container {  display: grid;
+@mixin grid {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+}
+
+%fondo{
+    background-image: url(../img/Rebajas-Foot-Locker-2a.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-left: 50px;
+        padding-right: 50px;
+}
+
+.container { 
+    @include grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.3fr 1fr 1fr 1fr 0.3fr 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
     gap: 16px 0px;
-    grid-auto-flow: row;
     grid-template-areas:
     "descripcion"
     "ofertas"
@@ -60,15 +83,9 @@ footer{
     "ingreso1"
     "ingreso2"
     "ingreso3";
-    justify-items: center;
     .descripcion {
         grid-area: descripcion;
-        background-image: url(../img/Rebajas-Foot-Locker-2a.webp);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        padding-left: 50px;
-        padding-right: 50px;
+        @extend %fondo
     }
 .ofertas { grid-area: ofertas; }
 .oferta1 { grid-area: oferta1; }
