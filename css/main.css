@@ -1,7 +1,5 @@
 header {
-  background-color: #cc1111;
-  position: sticky;
-  top: 0px; }
+  background-color: #cc1111; }
   header h1 {
     color: white;
     text-align: right;
@@ -21,6 +19,19 @@ header {
         margin: 6px; }
         header nav ul li a:hover {
           color: black; }
+
+.headerTop {
+  position: sticky;
+  top: 0px; }
+
+@media only screen and (min-width: 1024) {
+  nav ul li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px; } }
 
 * {
   margin: 0;
@@ -94,3 +105,67 @@ footer {
     grid-area: ingreso2; }
   .container .ingreso3 {
     grid-area: ingreso3; }
+
+/*contactanos*/
+.formulario {
+  background-color: white;
+  text-align: center;
+  color: #cc1111;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder; }
+
+.mapa {
+  display: flex;
+  justify-content: center; }
+
+/*media queris*/
+@media only screen and (min-width: 1024) {
+  h1 {
+    color: white;
+    text-align: right;
+    font-size: 75px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-right: 75px; }
+  h2 {
+    background-color: white;
+    text-align: center;
+    color: #cc1111;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 340px;
+    margin-right: 340px;
+    margin-top: 200px;
+    margin-bottom: 50px; }
+  h3 {
+    margin-top: 40px;
+    font-size: 30px; }
+  .container {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2.5fr 0.4fr 1.2fr 0.4fr 1.2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 16px;
+    grid-template-areas: "descripcion descripcion descripcion" "ofertas ofertas ofertas" "oferta1 oferta2 oferta3" "ingresos ingresos ingresos" "ingreso1 ingreso2 ingreso3"; }
+  .descripcion {
+    grid-area: descripcion; }
+  .ofertas {
+    grid-area: ofertas; }
+  .oferta1 {
+    grid-area: oferta1; }
+  .oferta2 {
+    grid-area: oferta2; }
+  .oferta3 {
+    grid-area: oferta3; }
+  .ingresos {
+    grid-area: ingresos; }
+  .ingreso1 {
+    grid-area: ingreso1; }
+  .ingreso2 {
+    grid-area: ingreso2; }
+  .ingreso3 {
+    grid-area: ingreso3; } }
