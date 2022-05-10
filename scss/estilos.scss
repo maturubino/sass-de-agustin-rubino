@@ -23,6 +23,7 @@ $subtitulos: (
 );
 .subtitulos{
     background-color: map-get($map: $subtitulos, $key: bg-color-subtitulos);
+    margin-top: 125px;
 }
 h2{
     text-align: center;
@@ -30,7 +31,6 @@ h2{
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     font-size: 20px;
-    margin-top: 125px;
 }
 h3{
     text-align: center;
@@ -67,7 +67,7 @@ footer{
         padding-right: 50px;
 }
 
-.container { 
+.containerIndex { 
     @include grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.3fr 1fr 1fr 1fr 0.3fr 1fr 1fr 1fr;
@@ -87,14 +87,46 @@ footer{
         grid-area: descripcion;
         @extend %fondo
     }
-.ofertas { grid-area: ofertas; }
-.oferta1 { grid-area: oferta1; }
-.oferta2 { grid-area: oferta2; }
-.oferta3 { grid-area: oferta3; }
-.ingresos { grid-area: ingresos; }
-.ingreso1 { grid-area: ingreso1; }
-.ingreso2 { grid-area: ingreso2; }
-.ingreso3 { grid-area: ingreso3; }
+.ofertas { 
+    grid-area: ofertas; 
+    background-color:white;
+}
+.oferta1 { 
+    grid-area: oferta1; 
+    
+}background-color:white;
+.oferta2 { 
+    grid-area: oferta2; 
+    background-color:white;
+}
+.oferta3 { 
+    grid-area: oferta3; 
+    background-color:white;
+}
+.ingresos { 
+    grid-area: ingresos;
+    background-color:white;
+}
+.ingreso1 { 
+    grid-area: ingreso1;
+    background-color:white;
+}
+.ingreso2 { 
+    grid-area: ingreso2;
+    background-color:white;
+}
+.ingreso3 { 
+    grid-area: ingreso3;
+    background-color:white;
+}
+}
+
+.arriba{
+    text-decoration: none;
+    color: rgb(204, 17, 17);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: larger;
 }
 
 /*contactanos*/
@@ -105,13 +137,42 @@ footer{
     font-size: 15px;
     font-family:'Roboto', sans-serif;
     font-weight: bolder;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 25px;
 }
 .mapa{
     display: flex;
     justify-content: center;
 }
+
+/*sobre nosotros*/
+.sobreNosotros {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "fondoNosotros "
+    "textNosotros ";
+}
+
+.fondoNosotros {
+    background-image: url(../img/rebajas-de-foot-locker-1.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-area: fondoNosotros;
+}
+
+.textNosotros { 
+    background-color: white;
+    grid-area: textNosotros; 
+}
+
 /*media queris*/
-@media only screen and (min-width:1024){
+@media only screen and (min-width: 1024px){
     h1{
         color: white;
         text-align: right;
@@ -133,10 +194,13 @@ footer{
         margin-bottom: 50px;
     }
     h3{
+        margin-left: 340px;
+        margin-right: 340px;
         margin-top: 40px;
+        margin-bottom: 50px;
         font-size: 30px;
     }
-    .container { @include grid;
+    .containerIndex { @include grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 2.5fr 0.4fr 1.2fr 0.4fr 1.2fr;
         grid-auto-columns: 1fr;
@@ -157,4 +221,55 @@ footer{
     .ingreso1 { grid-area: ingreso1; }
     .ingreso2 { grid-area: ingreso2; }
     .ingreso3 { grid-area: ingreso3; }
+/*sobre nosotros*/
+.snText{
+    margin: 50px;
+}
+p{
+    margin-left: 5px;
+}
+.sobreNosotros {  display: grid;
+    grid-template-columns: 1fr 0.8fr 1.2fr;
+    grid-template-rows: 1fr 1.3fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "fondoNosotros fondoNosotros fondoNosotros"
+    "textNosotros textNosotros imgNosotros";
+}
+
+.fondoNosotros {
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-area: fondoNosotros;
+}
+
+.textNosotros { 
+    background-color: white;
+    grid-area: textNosotros; 
+}
+
+.imgNosotros { background-color: rgb(204, 17, 17);
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 0.2fr;
+    grid-template-rows: 0.2fr 1.9fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". . ."
+    ". imgNosotros1 ."
+    ". . .";
+    grid-area: imgNosotros;
+}
+
+.imgNosotros1 {
+    background-image: url(../img/pexels-photo-589198.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-area: imgNosotros1; 
+}
 }

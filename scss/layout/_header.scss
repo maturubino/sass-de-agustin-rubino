@@ -9,6 +9,13 @@ header{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-right: 8px;
     font-size: 32px;
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+                color: black;
+            }
+        }
     }
     nav{
         text-align: center;
@@ -30,12 +37,7 @@ header{
     }
 }
 
-.headerTop{
-    position: sticky;
-    top: 0px;
-}
-
-@media only screen and (min-width:1024){
+@media only screen and (min-width: 1024px){
     nav ul li a{
         text-decoration: none;
         font-family: 'Roboto', sans-serif;
