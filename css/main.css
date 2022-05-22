@@ -64,6 +64,12 @@ h4 {
   font-family: 'Roboto', sans-serif;
   font-weight: bolder; }
 
+h5 {
+  text-align: center;
+  color: #cc1111;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder; }
+
 footer {
   text-align: center;
   color: #cc1111;
@@ -88,33 +94,25 @@ footer {
   grid-template-rows: 1fr 0.3fr 1fr 1fr 1fr 0.3fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   gap: 16px 0px;
-  grid-template-areas: "descripcion" "ofertas" "oferta1" "oferta2" "oferta3" "ingresos" "ingreso1" "ingreso2" "ingreso3";
-  background-color: white; }
+  grid-template-areas: "descripcion" "ofertas" "oferta1" "oferta2" "oferta3" "ingresos" "ingreso1" "ingreso2" "ingreso3"; }
   .containerIndex .descripcion {
     grid-area: descripcion; }
   .containerIndex .ofertas {
-    grid-area: ofertas;
-    background-color: white; }
+    grid-area: ofertas; }
   .containerIndex .oferta1 {
     grid-area: oferta1; }
   .containerIndex .oferta2 {
-    grid-area: oferta2;
-    background-color: white; }
+    grid-area: oferta2; }
   .containerIndex .oferta3 {
-    grid-area: oferta3;
-    background-color: white; }
+    grid-area: oferta3; }
   .containerIndex .ingresos {
-    grid-area: ingresos;
-    background-color: white; }
+    grid-area: ingresos; }
   .containerIndex .ingreso1 {
-    grid-area: ingreso1;
-    background-color: white; }
+    grid-area: ingreso1; }
   .containerIndex .ingreso2 {
-    grid-area: ingreso2;
-    background-color: white; }
+    grid-area: ingreso2; }
   .containerIndex .ingreso3 {
-    grid-area: ingreso3;
-    background-color: white; }
+    grid-area: ingreso3; }
 
 .arriba {
   text-align: center; }
@@ -159,7 +157,7 @@ footer {
   grid-area: mapaa; }
 
 .pTitle {
-  font-size: 100px;
+  font-size: 50px;
   margin: 30px; }
 
 .contact {
@@ -214,6 +212,8 @@ footer {
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding-right: 75px; }
+  .pTitle {
+    font-size: 90px; }
   .h2Index {
     margin-top: 300px; }
   h2 {
