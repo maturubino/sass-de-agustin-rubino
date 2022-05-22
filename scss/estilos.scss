@@ -126,9 +126,6 @@ footer{
 }
 
 /*contactanos*/
-.bgContactanos{
-    background-color: white;
-}
 .contactanos {  display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1.3fr 1.3fr;
@@ -207,6 +204,44 @@ footer{
 .textNosotros { 
     background-color: white;
     grid-area: textNosotros; 
+}
+/*NUEVO*/
+.loNuevo1 {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 10px px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "loNuevo loNuevo"
+    "text1 text1"
+    "zapa1 zapa1"
+    "text2 text2"
+    "zapa2 zapa2"
+    "text3 text3"
+    "zapa3 zapa3";
+}
+
+.loNuevo { grid-area: loNuevo;
+    text-align: center
+}
+.text1 { grid-area: text1;
+    text-align: center;}
+.zapa1 { grid-area: zapa1;
+    justify-self:center;}
+.text2 { grid-area: text2;
+    text-align: center; }
+.zapa2 { grid-area: zapa2;
+    justify-self:center;}
+.text3 { grid-area: text3;
+    text-align: center; }
+.zapa3 { grid-area: zapa3;
+    justify-self:center;}
+p{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+    font-weight: bolder;
+    font-size: 15px;
 }
 
 /*media queris*/
@@ -300,7 +335,7 @@ footer{
     margin: 50px;
 }
 p{
-    margin-left: 5px;
+    font-size: 23px;
 }
 .sobreNosotros {  display: grid;
     grid-template-columns: 1fr 0.8fr 1.2fr;
@@ -346,4 +381,49 @@ p{
     background-size: cover;
     grid-area: imgNosotros1; 
 }
+/*NUEVO*/
+.NUEVO{
+    margin: 0px;
+}
+.loNuevo1 {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "loNuevo loNuevo loNuevo"
+    "text1 text1 zapa1"
+    "zapa2 text2 text2"
+    "text3 text3 zapa3";
+}
+.loNuevo { 
+    grid-area: loNuevo; 
+    text-align: center;
+}
+.text1 {
+    grid-area: text1;
+    text-align: center;
+    
+}
+.zapa1 { 
+    grid-area: zapa1;
+    justify-self: center;}
+.zapa2 { 
+    grid-area: zapa2;
+    justify-self: center;}
+.text2 { 
+    grid-area: text2;
+    text-align: center;
+}
+.text3 { 
+    grid-area: text3;
+    text-align: center;
+}
+.zapa3 { 
+    grid-area: zapa3; 
+    justify-self: center;
+}
+
+
 }
