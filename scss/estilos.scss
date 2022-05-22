@@ -232,8 +232,10 @@ footer{
     .h2Index{
         margin-top: 300px;
     }
+    .grande{
+        font-size: 50px;
+    }
     h2{
-        background-color: white;
         text-align: center;
         color: rgb(204, 17, 17);
         font-family: 'Roboto', sans-serif;
@@ -244,12 +246,14 @@ footer{
         margin-top: 200px;
         margin-bottom: 50px;
     }
-    h3{
-        margin-left: 340px;
-        margin-right: 340px;
-        margin-top: 40px;
-        margin-bottom: 50px;
+    h3{margin-top: 20px;
         font-size: 30px;
+    }
+    h4{
+        font-size: 30px;
+    }
+    h5{
+        font-size: 30px
     }
     .containerIndex { @include grid;
         grid-template-columns: 1fr 1fr 1fr;
